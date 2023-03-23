@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Generics267
 {
-    class FindMinInteger
+    internal class FindMinFloat
     {
-        public int FindMinNumber(int first, int second, int third)
+        public float FindfloatMinNumber(float first, float second, float third)
         {
 
             if (first.CompareTo(second) < 0 && first.CompareTo(third) < 0)
