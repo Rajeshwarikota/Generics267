@@ -12,7 +12,7 @@ namespace Generics267
         {
             Console.WriteLine(".....Generics.....");
             Console.WriteLine("Enter the Option the below");
-            Console.WriteLine("\n1:Arrayoperations\n2:Generic method\n3:Generic class\n4:Finding Integer min value\n5:Finding float min value\n6:finfing string min value\n22:Default");
+            Console.WriteLine("\n1:Arrayoperations\n2:Generic method\n3:Generic class\n4:Finding Integer min value\n5:Finding float min value\n6:finfing string min value\n7:Generic method Refactor\n22:Default");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -201,8 +201,29 @@ namespace Generics267
                     string minString = stringmin.FindstringMinNumber(firstString, secondString, thirdString);
                     Console.WriteLine("The minimum string is: " + minString);
                     break;
+                case 7:
+                    GenericMethodRefactor minresult = new GenericMethodRefactor();
+                   
+                    Console.WriteLine("\n1:Find Max Number \n2:Find Max Float \n3:find max string \n5:Exit");
+                    int take = Convert.ToInt32(Console.ReadLine());
+                    switch (take)
+                    {
+                        case 1:
+                            Console.WriteLine("The Smallest Number is {0}", minresult.FindMinValue(43, 56, 15));
+                            break;
+                        case 2:
+                            Console.WriteLine("The smallest Value is {0}", minresult.FindMinValue(21.5f, 14.9f, 15));
+                            break;
+                        case 3:
+                            Console.WriteLine("The smallest Value is {0}", minresult.FindMinValue("Raji", "chandu", "Ammu"));
+                            break;
+                        default:
+                            Console.WriteLine("Enter the above one");
+                            break;
+                    }
+                    break;
                 default:
-                    Console.WriteLine("Enter the above option");
+                    Console.WriteLine("Enter the above one");
                     break;
             }
              Console.ReadLine();

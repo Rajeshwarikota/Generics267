@@ -49,6 +49,7 @@
     <Compile Include="FindMinString.cs" />
     <Compile Include="GenericClass.cs" />
     <Compile Include="GenericMethodOperations.cs" />
+    <Compile Include="GenericMethodRefactor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
