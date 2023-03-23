@@ -46,6 +46,7 @@
     <Compile Include="ArrayOperations.cs" />
     <Compile Include="FindMinFloat.cs" />
     <Compile Include="FindMinInteger.cs" />
+    <Compile Include="FindMinString.cs" />
     <Compile Include="GenericClass.cs" />
     <Compile Include="GenericMethodOperations.cs" />
     <Compile Include="Program.cs" />
