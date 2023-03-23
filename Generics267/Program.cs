@@ -12,7 +12,7 @@ namespace Generics267
         {
             Console.WriteLine(".....Generics.....");
             Console.WriteLine("Enter the Option the below");
-            Console.WriteLine("\n1:Arrayoperations\n2:Generic method\n3:Generic class\n22:Default");
+            Console.WriteLine("\n1:Arrayoperations\n2:Generic method\n3:Generic class\n4:Finding Integer min value\n22:Default");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -170,9 +170,19 @@ namespace Generics267
                             break;
                         default:
                             Console.WriteLine("Enter the above option");
+                            
                             break;
                     }
                 break;
+                case 4:
+                    Console.WriteLine("Enter the three elements");
+                    FindMinInteger min = new FindMinInteger();
+                    int first = Convert.ToInt32(Console.ReadLine());
+                    int second = Convert.ToInt32(Console.ReadLine());
+                    int third = Convert.ToInt32(Console.ReadLine());
+                    int minValue = min.FindMinNumber(first, second, third);
+                    Console.WriteLine("The minimum number is: " + minValue);
+                    break;
                 default:
                     Console.WriteLine("Enter the above option");
                     break;

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayOperations.cs" />
+    <Compile Include="FindMinInteger.cs" />
     <Compile Include="GenericClass.cs" />
     <Compile Include="GenericMethodOperations.cs" />
     <Compile Include="Program.cs" />
