@@ -10,6 +10,8 @@ namespace Generics267
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(".....Generics.....");
+            Console.ReadLine();
         }
     }
 }
