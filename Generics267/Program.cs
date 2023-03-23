@@ -12,7 +12,7 @@ namespace Generics267
         {
             Console.WriteLine(".....Generics.....");
             Console.WriteLine("Enter the Option the below");
-            Console.WriteLine("\n1:Arrayoperations\n2:Generic method\n22:Default");
+            Console.WriteLine("\n1:Arrayoperations\n2:Generic method\n3:Generic class\n22:Default");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -119,6 +119,60 @@ namespace Generics267
                             break;
                     }
                     break;
+                case 3:
+                    Console.WriteLine("Enter the Option the below");
+                    Console.WriteLine("\n1:Integer element delete\n2:Double element delete\n3:char element delete");
+                    int pickout = Convert.ToInt32(Console.ReadLine());
+
+                    switch (pickout)
+                    {
+                        case 1:
+                            Console.WriteLine("How many integer elements to add into method");
+                            int size = Convert.ToInt32(Console.ReadLine());
+                            int[] arr = new int[size];
+                            Console.WriteLine("Adding elements into array");
+                            for (int i = 0; i < size; i++)
+                            {
+                                arr[i] = Convert.ToInt32(Console.ReadLine());
+                            }
+                            Console.WriteLine("\nplease pickup any one element from this array");
+                            int Intresult = Convert.ToInt32(Console.ReadLine());
+                            GenericClass<int> generic = new GenericClass<int>(arr, Intresult);
+                            generic.DeleteElement();
+                            break;
+                        case 2:
+                            Console.WriteLine("How many integer elements to add into method");
+                            int doublesize = Convert.ToInt32(Console.ReadLine());
+                            double[] doublearr = new double[doublesize];
+                            Console.WriteLine("Adding elements into array");
+                            for (int i = 0; i < doublesize; i++)
+                            {
+                                doublearr[i] = Convert.ToDouble(Console.ReadLine());
+                            }
+                            Console.WriteLine("\nplease pickup any one element from this array");
+                            double Doubleresult = Convert.ToDouble(Console.ReadLine());
+                            GenericClass<double> Doublegeneric = new GenericClass<double>(doublearr, Doubleresult);
+                            Doublegeneric.DeleteElement();
+                            break;
+                        case 3:
+                            Console.WriteLine("How many char elements to add into array");
+                            int charsize = Convert.ToInt32(Console.ReadLine());
+                            char[] charArr = new char[charsize];
+                            Console.WriteLine("Adding elements into array");
+                            for (int i = 0; i < charArr.Length; i++)
+                            {
+                                charArr[i] = Convert.ToChar(Console.ReadLine());
+                            }
+                            Console.WriteLine("\nplease pickup any one element from this array");
+                            char deletechar = Convert.ToChar(Console.ReadLine());
+                            GenericClass<char> chargeneric = new GenericClass<char>(charArr, deletechar);
+                            chargeneric.DeleteElement();
+                            break;
+                        default:
+                            Console.WriteLine("Enter the above option");
+                            break;
+                    }
+                break;
                 default:
                     Console.WriteLine("Enter the above option");
                     break;
