@@ -12,7 +12,7 @@ namespace Generics267
         {
             Console.WriteLine(".....Generics.....");
             Console.WriteLine("Enter the Option the below");
-            Console.WriteLine("\n1:Arrayoperations");
+            Console.WriteLine("\n1:Arrayoperations\n2:Generic method\n22:Default");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -61,14 +61,66 @@ namespace Generics267
                             }
                             Console.WriteLine("\nplease pickup any one element from this array");
                             char deletechar = Convert.ToChar(Console.ReadLine());
-                           // char[] updatedArray = ArrayOperations.CharDeleteElement(charArr, deletechar);
-                            //Console.WriteLine($"Updated array: {string.Join(", ", updatedArray)}");
                             ArrayOperations.CharDeleteElement(charArr, deletechar);
                             break;
                         default:
                             Console.WriteLine("Enter the above option");
                             break;
                     }
+                    break;
+                case 2:
+                    Console.WriteLine("Enter the Option the below");
+                    Console.WriteLine("\n1:Integer element delete\n2:Double element delete\n3:char element delete");
+                    int pick = Convert.ToInt32(Console.ReadLine());
+
+                    switch (pick)
+                    {
+                        case 1:
+                            Console.WriteLine("How many integer elements to add into method");
+                            int size = Convert.ToInt32(Console.ReadLine());
+                            int[] arr = new int[size];
+                            Console.WriteLine("Adding elements into array");
+                            for (int i = 0; i < size; i++)
+                            {
+                                arr[i] = Convert.ToInt32(Console.ReadLine());
+                            }
+                            Console.WriteLine("\nplease pickup any one element from this array");
+                            int Intresult = Convert.ToInt32(Console.ReadLine());
+                            GenericMethodOperations.DeleteElement<int>(arr, Intresult);
+                            break;
+                         case 2:
+                            Console.WriteLine("How many integer elements to add into method");
+                            int doublesize = Convert.ToInt32(Console.ReadLine());
+                            double[] doublearr = new double[doublesize];
+                            Console.WriteLine("Adding elements into array");
+                            for (int i = 0; i < doublesize; i++)
+                            {
+                                doublearr[i] = Convert.ToDouble(Console.ReadLine());
+                            }
+                            Console.WriteLine("\nplease pickup any one element from this array");
+                            double Doubleresult = Convert.ToDouble(Console.ReadLine());
+                            GenericMethodOperations.DeleteElement<double>(doublearr, Doubleresult);
+                            break;
+                         case 3:
+                            Console.WriteLine("How many char elements to add into array");
+                            int charsize = Convert.ToInt32(Console.ReadLine());
+                            char[] charArr = new char[charsize];
+                            Console.WriteLine("Adding elements into array");
+                            for (int i = 0; i < charArr.Length; i++)
+                            {
+                                charArr[i] = Convert.ToChar(Console.ReadLine());
+                            }
+                            Console.WriteLine("\nplease pickup any one element from this array");
+                            char deletechar = Convert.ToChar(Console.ReadLine());
+                            GenericMethodOperations.DeleteElement<char>(charArr, deletechar);
+                            break;
+                        default:
+                            Console.WriteLine("Enter the above option");
+                            break;
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Enter the above option");
                     break;
             }
              Console.ReadLine();
