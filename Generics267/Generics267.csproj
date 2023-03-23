@@ -48,6 +48,7 @@
     <Compile Include="FindMinInteger.cs" />
     <Compile Include="FindMinString.cs" />
     <Compile Include="GenericClass.cs" />
+    <Compile Include="GenericClassRefactor.cs" />
     <Compile Include="GenericMethodOperations.cs" />
     <Compile Include="GenericMethodRefactor.cs" />
     <Compile Include="Program.cs" />

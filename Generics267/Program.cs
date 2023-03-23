@@ -12,7 +12,7 @@ namespace Generics267
         {
             Console.WriteLine(".....Generics.....");
             Console.WriteLine("Enter the Option the below");
-            Console.WriteLine("\n1:Arrayoperations\n2:Generic method\n3:Generic class\n4:Finding Integer min value\n5:Finding float min value\n6:finfing string min value\n7:Generic method Refactor\n22:Default");
+            Console.WriteLine("\n1:Arrayoperations\n2:Generic method\n3:Generic class\n4:Finding Integer min value\n5:Finding float min value\n6:finfing string min value\n7:Generic method Refactor\n8:Generic class Refactor\n22:Default");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -204,7 +204,7 @@ namespace Generics267
                 case 7:
                     GenericMethodRefactor minresult = new GenericMethodRefactor();
                    
-                    Console.WriteLine("\n1:Find Max Number \n2:Find Max Float \n3:find max string \n5:Exit");
+                    Console.WriteLine("\n1:Find Min Number \n2:Find Min Float \n3:find min string \n5:Exit");
                     int take = Convert.ToInt32(Console.ReadLine());
                     switch (take)
                     {
@@ -222,6 +222,25 @@ namespace Generics267
                             break;
                     }
                     break;
+                    case 8:
+                    Console.WriteLine("\n1:Find Min Number \n2:Find Min Float \n3:find min string \n5:Exit");
+                    int took = Convert.ToInt32(Console.ReadLine());
+                    switch (took)
+                    {
+                        case 1:
+                            Console.WriteLine("The smallest Number is {0}", GenericClassRefactor<int>.FindMinValue(56, 89, 45));
+                            break;
+                        case 2:
+                            Console.WriteLine("The smallest Value is {0}", GenericClassRefactor<float>.FindMinValue(56.8f, 67.3f, 15.8f));
+                            break;
+                        case 3:
+                            Console.WriteLine("The smallest Value is {0}", GenericClassRefactor<string>.FindMinValue("pavitra", "sailu", "neethu"));
+                            break;
+                        default:
+                            Console.WriteLine("Enter the above one");
+                            break;
+                    }
+                            break;
                 default:
                     Console.WriteLine("Enter the above one");
                     break;
